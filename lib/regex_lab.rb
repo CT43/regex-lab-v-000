@@ -15,12 +15,5 @@ def first_word_capitalized_and_ends_with_punctuation?(text)
 end
 
 def valid_phone_number?(phone)
- numbers = phone.each do |i|
-    splitnum = i.split("")
-    if splitnum.length == 10
-      return true
-     else
-     return false
-     end
- end
+  phone.matchh([0-9] *){10}|(\([0-9]{3}\)(([0-9]{3}-[0-9]{4})|[0-9]{7})\b) ? true:false
 end
